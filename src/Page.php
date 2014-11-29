@@ -128,15 +128,15 @@ class Page
 
     public function render($tabCount = 0)
     {
-        $code = md5(urlencode($this->url));
-        if($tabCount == 0) {
-            file_put_contents('tmp/codes.php', '<?php return ' . var_export(array()) . ';');
-        }
-        file_put_contents('tmp/codes.php', '<?php return ' . var_export(array_merge(array($code =>$this->url), require 'tmp/codes.php')) . ';');
-        var_dump(file_get_contents('tmp/codes.php'));
-        echo var_export(array_merge(array($code =>$this->url), require 'tmp/codes.php'));
-        die;
-        file_put_contents('tmp/'. $code . '.html', $this->response);
+        // $code = md5(urlencode($this->url));
+        // if($tabCount == 0) {
+        //     file_put_contents('tmp/codes.php', '<?php return ' . var_export(array()) . ';');
+        // }
+        // file_put_contents('tmp/codes.php', '<?php return ' . var_export(array_merge(array($code =>$this->url), require 'tmp/codes.php')) . ';');
+        // var_dump(file_get_contents('tmp/codes.php'));
+        // echo var_export(array_merge(array($code =>$this->url), require 'tmp/codes.php'));
+        // die;
+        // file_put_contents('tmp/'. $code . '.html', $this->response);
 
 
         $eol = $this->config['eol'];
